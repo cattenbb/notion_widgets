@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #FFBDCB;
+		}
+
+		.border {
+			border: 1px solid #FD70A1;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #F28DD0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border background">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="documents" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-folder"></i> Documents</a>
+		<a id="links" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-link"></i> Links</a>
+		<a id="research" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Research</a>
+		<a id="hobbies" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bookmark"></i> Hobbies</a>
+		<a id="medical" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-suitcase-medical"></i> Medical</a>
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/bunnykatbb/B-u-n-n-y-Dashboard-bee1967d376d4e6e85a82ba6412c6409?pvs=4", '_blank').focus();
+			else if (id == "documents")
+				window.open("https://www.notion.so/bunnykatbb/Documents-dc99b29261e04558a0390412d5ebb6af?pvs=4", '_blank').focus();
+			else if (id == "links")
+				window.open("https://www.notion.so/bunnykatbb/Links-2d7ed37ce77844ac96bb34eddfef5e12?pvs=4", '_blank').focus();
+			else if (id == "research")
+				window.open("https://www.notion.so/bunnykatbb/Research-5fae6ea6e6174475be163a49321036f3?pvs=4", '_blank').focus();
+			else if (id == "hobbies")
+				window.open("https://www.notion.so/bunnykatbb/Hobbies-5be04c1df4da419c9df8bde7de8aad57?pvs=4", '_blank').focus();
+			else if (id == "medical")
+				window.open("https://www.notion.so/bunnykatbb/Medical-f2e5600d304a4985804f3d657f966425?pvs=4", '_blank').focus();
+			
+			
+			
+		}
+	</script>
+
+	
+</body>
+
+</html>
